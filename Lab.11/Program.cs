@@ -23,9 +23,9 @@ namespace Lab._11
             moviesData.Add(new Movie("Howl's Movie Castle", "Animated"));
             moviesData.Add(new Movie("Spirited Away", "Animated"));
             Console.WriteLine("Hello! Welcome to Movie List, your premiere service for finding movies!");
-            Console.WriteLine(" ");
+            Console.WriteLine("******************************************************************");
             Console.WriteLine("There are 10 movies in this list.");
-            Console.WriteLine(" ");
+            Console.WriteLine("******************************************************************");
 
             var doAgain = true;
 
@@ -55,6 +55,12 @@ namespace Lab._11
                     Movie.PrintDrama(moviesData);
                 }
 
+                else
+                {
+                    Console.WriteLine("I'm sorry that is not a valid input.");
+                    Console.WriteLine(" ");
+                }
+
                 Console.Write("Would you like to choose another category? ");
                 var userRepeat = Console.ReadLine();
 
@@ -68,7 +74,7 @@ namespace Lab._11
                     doAgain = false;
                 }
             }
-            Console.WriteLine("Goodbye");
+            Console.WriteLine("Goodbye!");
             Console.ReadKey();
         }
     }
