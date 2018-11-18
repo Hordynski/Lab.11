@@ -12,6 +12,8 @@ namespace Lab._11
         {
             List<Movie> moviesData = new List<Movie>();
 
+            // James  - cool use of constructors here, makes the code look cleaner. 
+            // I would maybe have a seperate method or class to handle initializing the initial data.
             moviesData.Add(new Movie("My Neighbor Totoro", "Animated"));
             moviesData.Add(new Movie("The Room", "Drama"));
             moviesData.Add(new Movie("Gundam Wing: Endless Waltz", "Animated"));
@@ -35,6 +37,8 @@ namespace Lab._11
                 Console.Write("What category are you interested in? Your options are SciFi, Horror, Drama, and Animated: ");
                 var userEntry = Console.ReadLine();
 
+                // James - I like how this is sorted, easy to read. if you only care about a user entering one letter
+                // look into Console.ReadKey(), that may help you out.
                 if (userEntry.StartsWith("H", StringComparison.OrdinalIgnoreCase))
                 {
                     Movie.PrintHorror(moviesData);
